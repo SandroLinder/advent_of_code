@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func main() {
+func solveProblem01() {
 	var input = ReadFileIntoArray("resources/dec_01/ex_01.txt")
 
 	solveEx01(input)
