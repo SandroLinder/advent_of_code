@@ -6,6 +6,10 @@ import (
 	"os"
 )
 
+func IsDigit(u uint8) bool {
+	return u >= 48 && u <= 57
+}
+
 func ReadFileIntoArray(path string) []string {
 	file, err := os.Open(path)
 

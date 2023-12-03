@@ -126,7 +126,7 @@ func solveEx02Day02(input []string) {
 	println(sumOfPowers)
 }
 
-func main() {
+func solveProblem02() {
 	var input = ReadFileIntoArray("resources/dec_02/ex_01.txt")
 
 	solveEx01Day02(input)

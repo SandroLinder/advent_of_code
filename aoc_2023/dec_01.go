@@ -19,7 +19,7 @@ func solveEx02(input []string) {
 		var digits []int
 
 		for i := 0; i < len(line); i++ {
-			if isADigit(line[i]) {
+			if IsDigit(line[i]) {
 				number, _ := strconv.Atoi(string(line[i]))
 				digits = append(digits, number)
 			}
@@ -60,7 +60,7 @@ func solveEx01(input []string) {
 		end := len(row) - 1
 
 		for start < end {
-			if isADigit(row[start]) {
+			if IsDigit(row[start]) {
 				break
 			}
 
@@ -69,7 +69,7 @@ func solveEx01(input []string) {
 		firstDigit := row[start]
 
 		for end >= 0 {
-			if isADigit(row[end]) {
+			if IsDigit(row[end]) {
 				break
 			}
 
@@ -85,8 +85,4 @@ func solveEx01(input []string) {
 	}
 
 	fmt.Println(sum)
-}
-
-func isADigit(u uint8) bool {
-	return u >= 48 && u <= 57
 }
