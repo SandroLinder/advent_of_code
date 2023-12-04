@@ -16,7 +16,7 @@ func (l Location) String() string {
 
 var directions = []Location{{x: -1, y: 0}, {x: 1, y: 0}, {x: 0, y: -1}, {x: 0, y: 1}, {x: 1, y: -1}, {x: 1, y: 1}, {x: -1, y: -1}, {x: -1, y: 1}}
 
-func main() {
+func solveProblem03() {
 	var input = ReadFileIntoArray("resources/dec_03/example01.txt")
 	//var input = ReadFileIntoArray("resources/dec_03/input.txt")
 
