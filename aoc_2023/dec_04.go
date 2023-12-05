@@ -11,7 +11,7 @@ type Card struct {
 	drawn   []int
 }
 
-func main() {
+func solveProblemDec04() {
 	var input = ReadFileIntoArray("resources/dec_04/input.txt")
 	//var input = ReadFileIntoArray("resources/dec_04/example.txt")
 

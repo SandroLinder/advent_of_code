@@ -4,6 +4,8 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func IsDigit(u uint8) bool {
@@ -40,4 +42,19 @@ func ReverseString(s string) string {
 	}
 
 	return reversedString
+}
+
+func StringToNumberOfIntegers(s string) []int {
+	numbers := strings.Split(s, " ")
+	var result []int
+
+	for _, number := range numbers {
+		if number == "" {
+			continue
+		}
+		numberAsInt, _ := strconv.Atoi(number)
+		result = append(result, numberAsInt)
+	}
+
+	return result
 }
