@@ -33,7 +33,7 @@ func (m *Mapping) getSource() []int {
 	return sourceRange
 }
 
-func main() {
+func solvePart02() {
 	//var input = ReadFileIntoArray("resources/dec_05/example.txt")
 	var input = ReadFileIntoArray("resources/dec_05/input.txt")
 
