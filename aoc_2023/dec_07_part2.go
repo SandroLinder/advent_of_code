@@ -79,7 +79,7 @@ func compareCardsWithJoker(a string, b string) bool {
 	return false
 }
 
-func main() {
+func solveProb07Part2() {
 	input := ReadFileIntoArray("resources/dec_07/example.txt")
 	//input := ReadFileIntoArray("resources/dec_07/example2.txt")
 	//input := ReadFileIntoArray("resources/dec_07/input.txt")
