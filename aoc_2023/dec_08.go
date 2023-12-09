@@ -4,7 +4,7 @@ import (
 	"strings"
 )
 
-func main() {
+func solveProblem08() {
 	//var input = ReadFileIntoArray("resources/dec_08/example.txt")
 	//var input = ReadFileIntoArray("resources/dec_08/example2.txt")
 	//var input = ReadFileIntoArray("resources/dec_08/example3.txt")
