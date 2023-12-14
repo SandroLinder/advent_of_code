@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func solveProb12Part1() {
 	input := ReadFileIntoArray("resources/dec_11/example.txt")
 	//input := ReadFileIntoArray("resources/dec_11/input.txt")
 

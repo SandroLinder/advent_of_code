@@ -58,3 +58,22 @@ func StringToNumberOfIntegers(s string) []int {
 
 	return result
 }
+
+func StringToNumberOfIntegersBySymbol(s string, symbol string) []int {
+	symbolToSplit := " "
+	if symbol != "" {
+		symbolToSplit = symbol
+	}
+	numbers := strings.Split(s, symbolToSplit)
+	var result []int
+
+	for _, number := range numbers {
+		if number == "" {
+			continue
+		}
+		numberAsInt, _ := strconv.Atoi(number)
+		result = append(result, numberAsInt)
+	}
+
+	return result
+}
