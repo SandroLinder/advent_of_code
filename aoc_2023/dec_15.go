@@ -7,7 +7,7 @@ import (
 
 const (
 	ASSIGN = iota
-	RELOCATE
+	REMOVE
 )
 
 type Lense struct {
@@ -51,7 +51,7 @@ func solveProblem15Part2() {
 		if strings.HasSuffix(elem, "-") {
 			label = elem[:len(elem)-1]
 			hashKey = hash(label)
-			operation = RELOCATE
+			operation = REMOVE
 		} else {
 			label = elem[:len(elem)-2]
 			hashKey = hash(label)
