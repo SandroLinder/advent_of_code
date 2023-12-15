@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func solveProblem14() {
 	//input := ReadFileIntoArray("resources/dec_14/example.txt")
 	input := ReadFileIntoArray("resources/dec_14/input.txt")
 
