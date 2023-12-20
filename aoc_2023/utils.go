@@ -33,6 +33,16 @@ func ReadFileIntoArray(path string) []string {
 	return inputArray
 }
 
+func ReadFileIntoString(path string) string {
+	file, err := os.ReadFile(path)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	return string(file)
+}
+
 func ReverseString(s string) string {
 	reversedString := ""
 	end := len(s)
@@ -76,4 +86,20 @@ func StringToNumberOfIntegersBySymbol(s string, symbol string) []int {
 	}
 
 	return result
+}
+
+func maxInt(a int, b int) int {
+	if a > b {
+		return a
+	}
+
+	return b
+}
+
+func minInt(a int, b int) int {
+	if a < b {
+		return a
+	}
+
+	return b
 }
