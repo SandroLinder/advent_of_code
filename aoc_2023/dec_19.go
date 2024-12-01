@@ -30,7 +30,7 @@ type Condition struct {
 	destination string
 }
 
-func main() {
+func solveProblem19Part1() {
 	input := ReadFileIntoString("resources/dec_19/example.txt")
 	//input := ReadFileIntoString("resources/dec_19/input.txt")
 
