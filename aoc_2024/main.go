@@ -1,9 +1,9 @@
 package main
 
 func main() {
-	//var testInputString = ReadFileIntoArray("resources/dec_04/test_ex_01.txt")
-	var input = ReadFileIntoArray("resources/dec_04/input_1.txt")
+	var input = ReadFileIntoArray("resources/dec_05/test_ex_01.txt")
+	//var input = ReadFileIntoArray("resources/dec_05/input_1.txt")
 
-	//solveExercise1Day04(input)
-	solveExercise2Day04(input)
+	solveExercise1Day05(input)
+	//solveExercise2Day05(input)
 }

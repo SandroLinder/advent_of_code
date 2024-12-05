@@ -1,22 +1,24 @@
 package util
 
-import "fmt"
+import (
+	"fmt"
+)
 
-type StackNode[T any] struct {
+type StackNode[T comparable] struct {
 	prev  *StackNode[T]
 	value T
 }
 
-func NewStackNode[T any](value T) *StackNode[T] {
+func NewStackNode[T comparable](value T) *StackNode[T] {
 	return &StackNode[T]{value: value}
 }
 
-type Stack[T any] struct {
+type Stack[T comparable] struct {
 	head   *StackNode[T]
 	Length int
 }
 
-func NewStack[T any]() *Stack[T] {
+func NewStack[T comparable]() *Stack[T] {
 	return &Stack[T]{
 		Length: 0,
 	}
@@ -47,11 +49,40 @@ func (s *Stack[T]) Pop() (*T, error) {
 	return &node.value, nil
 }
 
+func (s *Stack[T]) Contains(elem T) bool {
+	head := s.head
+
+	for head != nil {
+		if head.value == elem {
+			return true
+		}
+
+		head = head.prev
+	}
+
+	return false
+}
+
+func (s *Stack[T]) ToArray() []T {
+	head := s.head
+
+	array := make([]T, s.Length)
+	index := 0
+	for head != nil {
+		array[index] = head.value
+		head = head.prev
+		index++
+	}
+	return array
+}
+
 func (s *Stack[T]) Debug() {
 	head := s.head
 
 	for head != nil {
-		println(head.value)
+		fmt.Print(head.value)
+		fmt.Print(" ")
 		head = head.prev
 	}
+	fmt.Println()
 }
