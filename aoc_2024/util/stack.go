@@ -49,6 +49,24 @@ func (s *Stack[T]) Pop() (*T, error) {
 	return &node.value, nil
 }
 
+func (s *Stack[T]) UniqueItems() int {
+	uniqueItems := make(map[T]bool)
+
+	head := s.head
+
+	for head != nil {
+		_, ok := uniqueItems[head.value]
+
+		if !ok {
+			uniqueItems[head.value] = true
+		}
+
+		head = head.prev
+	}
+
+	return len(uniqueItems)
+}
+
 func (s *Stack[T]) Contains(elem T) bool {
 	head := s.head
 
@@ -80,8 +98,7 @@ func (s *Stack[T]) Debug() {
 	head := s.head
 
 	for head != nil {
-		fmt.Print(head.value)
-		fmt.Print(" ")
+		fmt.Println(head.value)
 		head = head.prev
 	}
 	fmt.Println()
