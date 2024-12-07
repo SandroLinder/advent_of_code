@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -110,4 +111,12 @@ func minInt(a int, b int) int {
 	}
 
 	return b
+}
+
+func IntPower(a int, b int) int {
+	return int(math.Pow(float64(a), float64(b)))
+}
+
+func IsEven(number int) bool {
+	return number%2 == 0
 }

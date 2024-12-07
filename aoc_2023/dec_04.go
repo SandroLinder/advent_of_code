@@ -89,7 +89,8 @@ func solveDec04Part01() {
 }
 
 func parseCards(input []string) []Card {
-	var cards []Card
+	v,0,
+	0ar cards []Card
 
 	for _, row := range input {
 		split := strings.Split(row, ":")
