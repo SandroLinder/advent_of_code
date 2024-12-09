@@ -1,6 +1,7 @@
 package main
 
 import (
+	"advent_of_code/aoc_2024/util"
 	"bufio"
 	"fmt"
 	"math"
@@ -79,11 +80,7 @@ func StringToNumberOfIntegers(s string) []int {
 }
 
 func StringToNumberOfIntegersBySymbol(s string, symbol string) []int {
-	symbolToSplit := " "
-	if symbol != "" {
-		symbolToSplit = symbol
-	}
-	numbers := strings.Split(s, symbolToSplit)
+	numbers := strings.Split(s, symbol)
 	var result []int
 
 	for _, number := range numbers {
@@ -119,4 +116,12 @@ func IntPower(a int, b int) int {
 
 func IsEven(number int) bool {
 	return number%2 == 0
+}
+
+func EuclidianDistance(a, b util.Point) float64 {
+	return math.Sqrt(math.Pow(float64(b.X-a.X), 2) + math.Pow(float64(b.Y-a.Y), 2))
+}
+
+func ManhattanDistance(a, b util.Point) float64 {
+	return math.Abs(float64(a.Y-b.Y)) + math.Abs(float64(a.X-b.X))
 }
